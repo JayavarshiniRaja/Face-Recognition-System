@@ -1,0 +1,120 @@
+.card-wrapper {
+  margin: 5% 0;
+}
+
+/* You can adjust the image size by increasing/decreasing the width, height */
+.custom-circle-image {
+width: 10vw; /* note i used vw not px for better responsive */
+height: 10vw;
+}
+
+body {
+  font-size: 16px;
+  color: #3a0303;
+  background-color: #351a47;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.nav {
+  background-color: #ffff4d;
+}
+
+nav{
+  color  : #bde702 ;
+  background-color: #a38f94;
+  font-style: normal;
+  font-weight :bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.card {
+  background-color: #ffff4d;
+  width : 11vw;
+  height: 15vw;
+}
+
+.w-100 .h-100{
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 50%;
+}
+
+.custom-circle-image img {
+object-fit :fill;
+}
+
+.card-title {
+letter-spacing: 1px;
+}
+
+h4{
+  font-family: 'Times New Roman', Times, serif;
+  color: #990033;
+  font-style :normal;
+  font-size :small;
+}
+
+
+.card-text {
+font-family: MerriweatherRegular;
+font-size: 20px;
+line-height :initial;
+}
+
+.dropzone {
+border-style: dashed;
+background-color : #b46b7d;
+}
+
+.note {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(78, 5, 5);
+  font-weight: 300;
+}
+
+
+.error {
+font-family: MerriweatherRegular;
+font-size: 30px;
+line-height: initial;
+color: rgb(255, 255, 255);
+text-align: center;
+}
+
+#classTable {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+#classTable td, #classTable th {
+border: 1px solid rgb(16, 2, 26);
+padding: 8px;
+text-align: center;
+}
+
+#submitBtn{
+  background-color: rgb(42, 112, 21);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#classTable th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+background-color:  #69a746;
+color: rgb(8, 4, 29);
+font-size: medium;
+font-weight: bolder;
+
+}
+
+tr{
+  background-color: #69a746;
+  font-family: 'Times New Roman', Times, serif;
+  color :rgb(12, 19, 2);
+  font-size: bold;
+  
+}
+

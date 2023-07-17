@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="./techie.css">
+</head>
+
+<body>
+    <nav class="navbar justify-content-center">
+        <a class="navbar-brand" href="#">POPULAR CHIEF EXECUTIVE OFFICER CLASSIFICATION </a>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+        <div class="col card-wrapper" data-player="elon_Musk">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Elon_Musk.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Elon Musk</h4>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-player="jeff_Bezos">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Jeff_Bezos.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Jeff Bezos</h4>
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-player="lisa_Su">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/Lisa_Su.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Lisa Su</h4>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="mark_Zuckerberg">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/mark_zuckerberg.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Mark Zuckerberg</h4>
+
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="priya_Lakhani">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/priya_Lakhani.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Priya Lakhani</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col card-wrapper" data-player="satya_Nadella">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/satya_Nadella.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Satya Nadella</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col card-wrapper" data-player="sundar_Pichai">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/sundar_Pichai.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Sundar Pichai</h4>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+            </div>
+
+            <div class="col-sm-4" id="resultHolder">
+            </div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable">
+                        <tr>
+                            <th>Player</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Elon Musk</td>
+                            <td id="score_elon_Musk"></td>
+                        </tr>
+                        <tr>
+                            <td>Jeff Bezos</td>
+                            <td id="score_jeff_Bezos"></td>
+                        </tr>
+                        <tr>
+                            <td>Lisa Su</td>
+                            <td id="score_lisa_Su"></td>
+                        </tr>
+                        <tr>
+                            <td>Mark Zuckerberg</td>
+                            <td id="score_mark_Zuckerberg"></td>
+                        </tr>
+                        <tr>
+                            <td>Priya Lakhani</td>
+                            <td id="score_priya_Lakhani"></td>
+                        </tr>
+                        <tr>
+                            <td>Satya Nadella</td>
+                            <td id="score_satya_Nadella"></td>
+                        </tr>
+                        <tr>
+                            <td>Sundar Pichai</td>
+                            <td id="score_sundar_Pichai"></td>
+                        </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.js"></script>
+<script src="./techie.js"></script>
+</html>
