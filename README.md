@@ -1,4 +1,4 @@
-end to end machine learning project or data science project of classifying tech celebrity image classification. 
+End to End Machine Learning project or Data Science project of classifying tech celebrity image classification. 
 classify an image of my favourite 6 CEO's
 
 Workflow of the project :
